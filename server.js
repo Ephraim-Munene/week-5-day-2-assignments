@@ -151,9 +151,9 @@ app.delete('/api/cities/:id', auth, (req, res, next) => {
   });
 });
 
-// ==========================================================================
+
 // BONUS: RATE LIMITER MIDDLEWARE
-// ==========================================================================
+
 // A Map is like an object but better for tracking data with keys
 // We store each IP address and their request count + timestamp
 const requestStore = new Map();
@@ -202,8 +202,8 @@ const rateLimiter = (req, res, next) => {
 };
 
 // Apply rate limiter to ALL routes (place it before routes)
-// Uncomment the line below to enable rate limiting:
-// app.use(rateLimiter);
+
+app.use(rateLimiter);
 
 // ==========================================================================
 // TEST ROUTE: Broken route to test 500 error handling
