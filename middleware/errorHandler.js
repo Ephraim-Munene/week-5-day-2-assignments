@@ -4,11 +4,10 @@
 // This file does TWO things:
 // 1. Defines a custom error class (AppError) for predictable errors we throw
 // 2. Defines an error-handling middleware that catches ALL errors in one place
-// ============================================================================
 
-// ==========================================================================
+
 // PART 1: Custom Error Class
-// ==========================================================================
+
 // JavaScript has a built-in Error class. We EXTEND it to create our own
 // 'class' is like a blueprint for creating objects
 // 'extends Error' means "our AppError is a special type of Error"

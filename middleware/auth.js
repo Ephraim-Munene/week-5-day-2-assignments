@@ -15,7 +15,7 @@ const auth = (req, res, next) => {
   const apiKey = req.headers["x-api-key"];
   
   // Check if the API key header is MISSING
-  // '!' means "not" — so '!apiKey' means "if apiKey is undefined, null, or empty"
+ 
   if (!apiKey) {
     // 401 = Unauthorized (you didn't provide credentials)
     // We send a JSON error and RETURN to stop the function here
@@ -26,7 +26,6 @@ const auth = (req, res, next) => {
   }
   
   // Check if the provided API key is WRONG
-  // We compare what the client sent against our secret key
   if (apiKey !== API_KEY) {
     // 401 again — they provided a key, but it's not the right one
     return res.status(401).json({
