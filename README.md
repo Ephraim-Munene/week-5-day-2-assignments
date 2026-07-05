@@ -15,8 +15,7 @@
 - [Middleware Explained](#middleware-explained)
 - [API Endpoints](#api-endpoints)
 - [Testing with cURL](#testing-with-curl)
-- [What I Learned](#what-i-learned)
-- [Author](#author)
+
 
 ---
 
@@ -310,9 +309,4 @@ res.on("finish"): The only reliable way to capture the final status code and cal
 Selective Authentication: Passing auth as a second argument to specific routes (app.post('/api/cities', auth, handler)) protects only those routes while leaving others public.
 Custom Error Classes: Extending the built-in Error class with AppError allows us to distinguish between expected operational errors (404) and unexpected programming errors (500).
 4-Parameter Error Handlers: Express recognizes (err, req, res, next) as an error-handling middleware because of the 4 parameters. It must be registered AFTER all other routes.
-Security: Never log passwords, never expose internal error details or stack traces to clients in production.
-👤 Author
-Your Name
-Course: Backend Development (Week 5)
-GitHub: @yourusername
-💡 This project was built for educational purposes as part of a Node.js & Express backend development curriculum.
+Security: Never log passwords, never expose internal error details or stack traces to clients in productio
